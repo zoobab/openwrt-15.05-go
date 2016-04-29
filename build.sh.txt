@@ -1,0 +1,26 @@
+zoobab@sabayonx86-64 /home/zoobab/soft/openwrt-15.05-go [79]$ ./build.sh 
++ echo '=== Downloading and untarring... ==='
+=== Downloading and untarring... ===
++ TARBALL=OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
++ wget -c http://filez.zoobab.com/openwrt/gccgo-toolchain/ar71xx-glibc/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2 -O OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
+--2016-04-29 16:08:16--  http://filez.zoobab.com/openwrt/gccgo-toolchain/ar71xx-glibc/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
+Resolving filez.zoobab.com... 195.154.118.161
+Connecting to filez.zoobab.com|195.154.118.161|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 72995676 (70M) [application/octet-stream]
+Saving to: 'OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2'
+
+OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.1 100%[======================================================================================================================>]  69.61M  5.93MB/s    in 12s     
+
+2016-04-29 16:08:28 (5.77 MB/s) - 'OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2' saved [72995676/72995676]
+
++ tar -xf OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
++ echo '=== Cross Compiling hello.go ==='
+=== Cross Compiling hello.go ===
++ ROOTDIR=/home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19
++ GCCGO='/home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/bin/mips-openwrt-linux-gccgo -Wl,-R,/home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/lib/gcc/mips-openwrt-linux-gnu/5.3.0 -L /home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/lib'
++ /home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/bin/mips-openwrt-linux-gccgo -Wl,-R,/home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/lib/gcc/mips-openwrt-linux-gnu/5.3.0 -L /home/zoobab/soft/openwrt-15.05-go/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/lib -o hello hello.go -static-libgo
+mips-openwrt-linux-gccgo: warning: environment variable 'STAGING_DIR' not defined
+mips-openwrt-linux-gccgo: warning: environment variable 'STAGING_DIR' not defined
++ file hello
+hello: ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1, dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 2.6.16, not stripped
