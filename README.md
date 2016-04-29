@@ -15,3 +15,8 @@ http://filez.zoobab.com/openwrt/gccgo-toolchain/ar71xx-glibc/
 The toolchain contains `mips-openwrt-linux-gnu-gccgo`, `mips-openwrt-linux-gnu-go`, `mips-openwrt-linux-gnu-gofmt` and the go libraries:
 
 http://filez.zoobab.com/openwrt/gccgo-toolchain/ar71xx-glibc/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
+
+Links
+=====
+
+* Cross-compile an hello.go: http://www.sajalkayan.com/post/golang-openwrt-mips.html
