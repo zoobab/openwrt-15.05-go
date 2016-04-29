@@ -16,6 +16,30 @@ The toolchain contains `mips-openwrt-linux-gnu-gccgo`, `mips-openwrt-linux-gnu-g
 
 http://filez.zoobab.com/openwrt/gccgo-toolchain/ar71xx-glibc/OpenWrt-Toolchain-ar71xx-generic_gcc-5.3.0_glibc-2.19.Linux-x86_64.tar.bz2
 
+Usage
+=====
+
+You can build the complete OpenWRT with the Docker recipe like this:
+
+```
+$ docker build -t openwrt-15.05-go:latest .
+```
+
+The output is roughly 10GB.
+
+And then run inside to find the toolchain:
+
+```
+$ docker run -i -t openwrt-15.05-go:latest /bin/bash
+```
+
+You will find the toolchain under `/home/openwrt/openwrt-15.05/staging_dir/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/bin` .
+
+Compile a hello.go
+==================
+
+Look at build.sh on how to build a hello.go with the toolchain.
+
 Links
 =====
 
