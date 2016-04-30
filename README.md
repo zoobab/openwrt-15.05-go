@@ -27,6 +27,12 @@ $ docker build -t openwrt-15.05-go:latest .
 
 The output is roughly 10GB.
 
+You can also download the precompiled binary docker image from the docker hub (also 10GB):
+
+```
+$ docker pull zoobab/openwrt-15.05-go
+```
+
 And then run inside to find the toolchain:
 
 ```
@@ -44,3 +50,4 @@ Links
 =====
 
 * Cross-compile an hello.go: http://www.sajalkayan.com/post/golang-openwrt-mips.html
+* GCCGO toolchain for OpenWRT: https://hub.docker.com/r/zoobab/openwrt-15.05-go/
