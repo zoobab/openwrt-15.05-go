@@ -36,7 +36,7 @@ $ docker pull zoobab/openwrt-15.05-go
 And then run inside to find the toolchain:
 
 ```
-$ docker run -i -t openwrt-15.05-go:latest /bin/bash
+$ docker run -i -t zoobab/openwrt-15.05-go:latest /bin/bash
 ```
 
 You will find the toolchain under `/home/openwrt/openwrt-15.05/staging_dir/toolchain-mips_34kc_gcc-5.3.0_glibc-2.19/bin` .
